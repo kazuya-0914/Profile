@@ -23,34 +23,34 @@
   <section id="bicycle" class="wrapper">
     <h2 class="section-title">Bicycle</h2>
 
-      <?php
-        $args = [
-          'post_type' => 'post',
-          'category_name' => 'news',
-          'posts_per_page' => 3,
-        ];
-        $posts = get_posts($args);
-      ?>
-      <div class="bicycle-box">
-        <ul>
-
-        <?php foreach($posts as $post): ?>
-          <?php setup_postdata($post); ?>
-          <li>
-            <a href="<?php the_permalink();?>">
-              <img src="<?php the_post_thumbnail_url('full');?>" alt="">
-              <h3 class="content-title"><?php the_title(); ?></h3>
-              <p>
-              <?php
-                $content = wp_trim_words( get_the_content(),30,'...');
-                echo $content
-              ?>
-              </p>
-            </a>
-          </li>
-        <?php endforeach;?>
-        <?php wp_reset_postdata();?>
-        </ul>
+    <?php
+      $args = [
+        'post_type' => 'post',
+        'category_name' => 'news',
+        'posts_per_page' => 3,
+      ];
+      $posts = get_posts($args);
+    ?>
+    <div class="bicycle-box">
+      <ul>
+      <?php foreach($posts as $post): ?>
+        <?php setup_postdata($post); ?>
+        <li>
+          <a href="<?php the_permalink();?>">
+            <img src="<?php the_post_thumbnail_url('full');?>" alt="">
+            <h3 class="content-title"><?php the_title(); ?></h3>
+            <p>
+            <?php
+              $content = wp_trim_words( get_the_content(),30,'...');
+              echo $content
+            ?>
+            </p>
+          </a>
+        </li>
+      <?php endforeach;?>
+      <?php wp_reset_postdata();?>
+      </ul>
+    </div>
   </section>
 </main>
 
