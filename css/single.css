@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+#mainvisual {
+  margin-bottom: 30px;
+}
+.title {
+  text-align: left;
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+.content {
+  padding: 0 30px;
+  margin-bottom: 60px;
+  text-align: left;
+}
+.content p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+  .title {
+    padding: 0;
+  }
+  .content {
+    padding: 0;
+  }
+}
